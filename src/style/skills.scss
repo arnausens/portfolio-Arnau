@@ -103,11 +103,13 @@
 @media (max-width: 800px) {
     .skills-wrapper {
         grid-template-columns: 1fr;
-        width: auto;
+        width: 80vw;
         padding: 19px;
+        padding-top: 60px;
+        padding-bottom: 60px;
 
         .skill {
-            width: auto;
+            width: 70%;
         }
 
         .skill p {
