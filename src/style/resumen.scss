@@ -1,0 +1,98 @@
+.resumen-p {
+    height: 400px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0px 0px 20px 10px #0076c1;
+   
+    img {
+        position: absolute;
+        height: 400px;
+        width: 600px;
+        background-color: rgba(6, 25, 131, 0.61);
+    }
+    .glitch{
+        color:white;
+        font-size: 15px;
+        position:relative;
+        width:450px;
+        margin:0 auto;
+        letter-spacing: 2px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+    @keyframes noise-anim{
+        $steps:20;
+        @for $i from 0 through $steps{
+            #{percentage($i*(1/$steps))}{
+                clip:rect(random(800)+px,9999px,random(800)+px,0);
+            }
+        }
+    }
+    .glitch:after{
+        content:attr(data-text);
+        position:absolute;
+        left:2px;
+        text-shadow:-1px 0 #ff009d;
+        top:0;
+        color:white;
+        overflow:hidden;
+        clip:rect(0,900px,0,0); 
+        animation:noise-anim 1s infinite linear alternate-reverse;
+    }
+    
+    @keyframes noise-anim-2{
+        $steps:20;
+        @for $i from 0 through $steps{
+            #{percentage($i*(1/$steps))}{
+            clip:rect(random(20)+px,9999px,random(10)+px,0);
+        }
+      }
+    }
+    .glitch:before{
+        content:attr(data-text);
+        position:absolute;
+        left:-2px;
+        text-shadow:1px 0 rgb(255, 180, 236); 
+        top:0;
+        color:white;
+        overflow:hidden;
+        clip:rect(0,900px,0,0); 
+        animation:noise-anim-2 3s infinite linear alternate-reverse;
+    }
+    
+}
+@media (max-width: 660px) {
+    .resumen-p {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 400px;
+    }
+    .resumen-p img {
+        height: 600px;
+        width: 400px;
+    }
+    .resumen-p {
+        .glitch {
+            width: 300px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .resumen-p {
+        width: auto;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    .resumen-p img {
+        height: 750px;
+        width: 350px;
+    }
+    .resumen-p {
+        .glitch {
+            width: 250px;
+        }
+    }
+}

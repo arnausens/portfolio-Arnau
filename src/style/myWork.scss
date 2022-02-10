@@ -1,0 +1,91 @@
+.mywork-wrapper-high {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    border: solid 3px #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px 10px rgb(5, 255, 5);
+}
+.mywork-wrapper {
+    box-sizing: border-box;
+    width: 170px;
+    perspective: 1000px;
+    position: relative;
+    font-family: "Audiowide", sans-serif;
+    margin-bottom: 150px;
+    
+
+    h1 {
+        padding-bottom: 20px;
+    }
+
+    .works-wrapper {
+        width: 100%;
+        position: absolute;
+        animation: rotate 20s infinite linear;
+        transform-style: preserve-3d;
+        
+
+        @keyframes rotate {
+            from {
+                transform: rotateY(0deg);
+            } to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .work {
+            width: 100%;
+            position: absolute;
+            
+
+            img {
+                transition: all 300ms;
+                object-fit: fill;
+                height: 150px;
+                position: absolute;
+                filter: drop-shadow(0px 0px 10px #bc13fe);
+                padding-top: 10px;
+                border-radius: "15px";
+            }
+            
+
+
+            &:nth-child(1){
+                transform: rotateY(0deg) translateZ(300px);
+            }
+            &:nth-child(2){
+                transform: rotateY(45deg) translateZ(300px);
+            }
+            &:nth-child(3){
+                transform: rotateY(90deg) translateZ(300px);
+            }
+            &:nth-child(4){
+                transform: rotateY(135deg) translateZ(300px);
+            }
+            &:nth-child(5){
+                transform: rotateY(180deg) translateZ(300px);
+            }
+            &:nth-child(6){
+                transform: rotateY(225deg) translateZ(300px);
+            }
+            &:nth-child(7){
+                transform: rotateY(270deg) translateZ(300px);
+            }
+            &:nth-child(8){
+                transform: rotateY(315deg) translateZ(300px);
+            }
+        }      
+    }  
+}
+
+@media (max-width: 700px) {
+    .mywork-wrapper {
+        transform: scale(0.7);
+    }
+}
+@media (max-width: 500px) {
+    .mywork-wrapper {
+        transform: scale(0.5);
+    }
+}

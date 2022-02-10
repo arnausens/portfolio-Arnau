@@ -1,0 +1,89 @@
+body {
+    background: url("../../static/assets/texturaLadrilloOscuroU.jpg");
+    margin: 0;
+}
+
+
+.app {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    //  ------ T O P ---------------------->
+    .top-page {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        &__top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .linkedin-icon {
+            padding: 20px;
+            font-size: 2em;
+            color: #ffffff;
+            filter: drop-shadow(0px 0px 15px #7ae448);
+            &:hover {
+                filter: none;
+            }
+        }
+        .email {
+            font-family: "Sacramento", sans-serif;
+            font-weight: 400;
+            color: #fff;
+            text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #bc13fe,
+            0 0 82px #bc13fe,
+            0 0 92px #bc13fe,
+            0 0 102px #bc13fe,
+        }
+       
+    }
+    // ------------------ M I D --------------->
+    .resume-photo {
+        background-image: url(../../static/assets/fondos/ladrilloViejo.jpg);
+        background-size: contain;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 0 120px 0;
+        border: 2px solid black;
+        box-shadow: 0px 0px 20px 10px #000000;
+    }
+    .resumen-foto {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 50px;
+    }
+    @media (max-width: 1450px) {
+        .resume-photo {
+            width: 99%;
+        }
+    }
+    @media (max-width: 900px) {
+        .resumen-foto {
+            grid-template-columns: 1fr;
+        }
+        
+    } 
+    
+}
+
+
+@import "./lineas.scss";
+@import "./parallax.scss";
+@import "./topTitle.scss";
+@import "./resumen.scss";
+@import "./skills.scss";
+@import "./arrowSvg.scss";
+@import "./myWork.scss";
+

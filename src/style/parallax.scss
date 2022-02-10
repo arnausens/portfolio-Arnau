@@ -1,0 +1,59 @@
+
+.parallax-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    overflow: hidden;
+    border-radius: 40px;
+    border: solid 10px rgb(255, 212, 245);
+    box-shadow: 0px 0px 50px 10px rgba(0, 118, 193, 1);
+
+    @keyframes pulsate {
+        100% {
+            box-shadow:
+            0px 0px 4px 10px rgba(0, 118, 193, 1),
+            0px 0px 11px 10px rgba(0, 118, 193, 1),
+            0px 0px 19px 10px rgba(0, 118, 193, 1),
+            0px 0px 42px 10px rgba(0, 118, 193, 1),           
+        }
+       0% {
+            box-shadow:
+            0px 0px 4px 10px rgba(0, 118, 193, 1),
+            0px 0px 10px 10px rgba(0, 118, 193, 1),
+            0px 0px 18px 10px rgba(0, 118, 193, 1),
+            0px 0px 48px 10px rgba(0, 118, 193, 1),           
+        }
+         
+    }
+    animation: pulsate 0.11s ease-in-out infinite alternate;
+
+    .parallax-img__mundo {
+        height: 380px;
+        margin-top: -10px;
+    }
+
+    .parallax-img__codigo{
+        top: -20px !important;
+        width: 500px;
+        height: 400px;
+    }
+    .parallax-img__arnau {
+        width: 240px;
+        left: -8px !important;
+    }
+    .parallax-img__interferencia {
+        @keyframes interf { 
+            0%, 18%, 22%, 25%, 44%, 50%, 100% {
+                opacity: 0;
+            }
+
+            20%, 23%, 45%, 90% {
+                opacity: 1;
+            }
+          }
+        height: 380px;
+        left: -77px !important;
+        animation: interf 8s infinite;
+    }
+}
